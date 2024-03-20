@@ -55,5 +55,5 @@ export default class User extends compose(BaseModel, AuthFinder) {
   declare job_id: HasOne<typeof Job>
 
   @column()
-  declare job: Job
+  declare job: number
 }

@@ -45,13 +45,13 @@ export default class AuthController {
 
       // Create the user
       const user = await User.create({
-        email: email,
-        password: password,
-        fullname: fullname,
-        area: area,
-        tel: tel,
+        email,
+        password,
+        fullname,
+        area,
+        tel,
         img: filename,
-        job: jobExist,
+        job: jobExist.id,
       })
 
       await user.save()
